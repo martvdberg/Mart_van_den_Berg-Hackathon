@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Kano's - Keuzehulp</title>
+</head>
+
+<body>
+    <header id="top-of-page">
+        <img src="img/header_image.jpg" alt="Kano logo" class="header-img left-img">
+        <div class="header-text">
+            <h1 class="main-text">Kano's</h1>
+            <h2 class="sub-text">Lekker op het water</h2>
+        </div>
+        <img src="img/header_image.jpg" alt="Kano logo" class="header-img right-img">
+    </header>
+
+    <nav class="main-nav">
+        <ul>
+            <a href="index.html">
+                <li>Home</li>
+            </a>
+            <a href="keuzehulp.html">
+                <li class="current-page">Keuzehulp</li>
+            </a>
+            <a href="bouweenkano.html">
+                <li>Bouwplan</li>
+            </a>
+            <a href="fotogallerij.html">
+                <li>Gallerij</li>
+            </a>
+        </ul>
+    </nav>
+
+    <main class="form-page">
+        <section class="form-text">
+            <h1>Help!</h1>
+            <h2>Welke kano past bij mij?</h2>
+            <p>
+
+                Vind je de keuze voor het kiezen va neen kano ook zo moeilijk? Twijvel dan niet langer en laat ons de
+                keuze voor je maken. Vul simpelweg het formurlier in en wij gaan aan de slag om de beste kano voor jou
+                te vinden!
+            </p>
+            <p class="form-explain">Velden met een <abbr title="verplicht veld">*</abbr> zijn verplicht.</p>
+        </section>
+
+        <!--Het formulier heeft geen action mee gekregen omdat de site niet live is, mocht dee bijvoorbeeld bij netlify live gaan zou ik 
+            <form name="recept" method="POST" data-netlify="true"> kunen invullen zodat het formulier ook daadwerkelijk iets doet. -->
+        <form>
+            <fieldset class="pers-info">
+                <legend>Persoonlijke info</legend>
+                <label for="name">
+                    Naam <abbr title="verplicht veld">*</abbr>
+                </label>
+                <input type="text" name="naam" id="name" maxlength="200" placeholder="Naam *" required>
+
+                <label for="email">
+                    E-mail<abbr title="verplicht veld">*</abbr>
+                </label>
+                <input type="" name="email" id="email" maxlength="200" placeholder="E-mail *" required>
+
+                <label for="length">
+                    Lichaamslengte (in cm)<abbr title="verplicht veld">*</abbr>
+                </label>
+                <input type="number" name="lichaamslengte" id="lenght" maxlength="3" placeholder="Lengte in cm *"
+                    required>
+
+                <label for="weight">
+                    Gewicht (in kg)<abbr title="verplicht veld">*</abbr>
+                </label>
+                <input type="number" name="gewicht" id="weight" placeholder="Gewicht in kg *" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Gebruik van de kano</legend>
+                <p class="lbl"> Waar wil je varen?</p>
+                <ul class="opt-list">
+                    <li>
+                        <label for="calmwater">
+                            <input type="checkbox" name="locatie" id="calmwater">
+                            Vlakwater
+                        </label>
+
+                    </li>
+                    <li>
+                        <label for="wildwater">
+                            <input type="checkbox" name="locatie" id="wildwater">
+                            Wildwater
+                        </label>
+
+                    </li>
+                    <li>
+                        <label for="sea">
+                            <input type="checkbox" name="locatie" id="sea">
+                            Op zee
+                        </label>
+                    </li>
+                    <li>
+                        <label for="unknown">
+                            <input type="checkbox" name="locatie" id="unknown">
+                            Nog geen idee
+                        </label>
+                    </li>
+                </ul>
+
+                <label for="discipline">Selecteer een eventuele discipline</label>
+                <select name="discipline" id="discipline">
+                    <option value="blanc"></option>
+                    <option value="Slalom">Slalom</option>
+                    <option value="Freestyle">Freestyle</option>
+                    <option value="Toervaren">Toervaren</option>
+                    <option value="Geen idee">Nog geen idee</option>
+                </select>
+
+                <p class="lbl">Met hoeveel personen ga je varen?</p>
+                <ul class="opt-list">
+                    <li>
+                        <label for="alone">
+                            <input type="radio" name="aantal gebruikers" id="alone">
+                            Uitsluitend alleen
+                        </label>
+                    </li>
+                    <li>
+                        <label for="2person">
+                            <input type="radio" name="aantal gebruikers" id="2person">
+                            Meestal met zn tweeen
+                        </label>
+                    </li>
+                    <li>
+                        <label for="3ormore">
+                            <input type="radio" name="aantal gebruikers" id="3ormore">
+                            Met minimaal 3 personen
+                        </label>
+                    </li>
+                </ul>
+            </fieldset>
+
+            <fieldset>
+                <legend>Overige info</legend>
+                <label for="color">
+                    Selecteer je favoriete kleur
+                </label>
+                <input type="color" name="favoriete kleur" id="color" value="#fc12d9">
+
+                <label for="message">
+                    Zijn er nog andere zaken die belangrijk zijn voor de keuze van je kano?
+                </label>
+                <textarea name="extra info" id="message" cols="30" rows="10"></textarea>
+            </fieldset>
+
+            <fieldset class="submit-form">
+                <label for="agree">
+                    <input type="checkbox" name="toestemming voor gebruik" id="agree" required>
+                    Ik ga er mee akoord dat mijn gegevens gebruikt worden voor het maken van een keuze voor een kano
+                    en
+                    dat er na onderzoek contact met mij wordt opgenomen. <abbr title="verplicht veld">*</abbr>
+                </label>
+
+                <label for="newsletter" class="news-subsrcibe">
+                    <input type="checkbox" name="nieusbrief" id="newsletter" checked>
+                    Ik meld me ook aan voor de nieuwsbrief!
+                </label>
+
+                <button type="submit">Zoek mijn kano!</button>
+            </fieldset>
+        </form>
+    </main>
+
+    <aside>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore perspiciatis temporibus magnam unde, ullam
+            porro quidem vitae rem qui necessitatibus, repellat sequi maxime excepturi architecto ducimus ipsum
+            doloribus ab animi?</p>
+        <ul class="social-nav">
+            <li><a href="https://en-gb.facebook.com/login/">Facebook</a></li>
+            <li><a href="https://twitter.com/?lang=en">Twitter</a></li>
+            <li><a href="https://www.instagram.com/">Instagram</a></li>
+        </ul>
+    </aside>
+
+    <footer>
+        <a href="#top-of-page" class="link-top link-text">Terug naar boven</a>
+
+        <p class="disclaimer">
+            Disclaimer:<br>
+            Ik weet werkelijk helemaal niks van kano's behalve dat het een lekker koekje is. Alle informatie die op
+            deze website staat is dus of van <a class="link-text" href="https://www.wikipedia.org/"
+                target="_blank">Wikipedia</a>
+            afkomstig of volledig uit mijn duim gezogen.
+        </p>
+    </footer>
+</body>
+
+</html>
